@@ -1,6 +1,6 @@
 float theta = 0;
 float thetaStart = 0;
-float circleSize = 100;
+float circleSize = 30;
 
 void setup() {
   colorMode(HSB, 360, 100, 100, 100);
@@ -17,7 +17,7 @@ void draw() {
     fill(map(x, 0, width, 0, 360), 100, 100, 50);
     float y = map(sin(theta), -1, 1, height*.25, height*.75);
     ellipse(x, y, circleSize, circleSize);
-    theta += .3;
+    theta += .2;
   }
-  thetaStart += .005;
+  thetaStart += .1;
 }
